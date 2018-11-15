@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  description: "Servicio que orquesta los servicios de routing, transform y dispatching"
+  version: "1.0.0"
+  title: "Servicio Orquestador"
+host: "localhost:5001"
+schemes:
+- "http"
+paths:
+  /orquestador:
+    post:
+      description: Retorna la confirmacion de un pago de servicios
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Datos de la factura"
+        required: true
+        schema:
+          $ref: "#/definitions/factura"
+      responses:
+        200:
+          description: Retorna la confirmacion del pago de una factura.
+          schema:
+            $ref: "#/definitions/respuestaOperacion" 
+        404:
+          description: Error en los parámetros, página no encontrada.
+definitions:
+  factura:
+    type: object
+    required:
+    - "nroFactura"
+    - "operacion"
+    - "valor"
+    properties:
+      nroFactura:
+        type: "string"
+        example: = "1234567"
+      operacion:
+        type: "string"
+        example: ="Consultar,Pagar,Compensar"
+      valor:
+        type: "number"
+    xml:
+      name: "factura"
+  respuestaOperacion:
+    type: object
+    required: 
+    - "confirmacion"
+    properties:
+      confirmacion:
+        type: "string"
+        example: "Pago realizado"
+    xml:
+      name: "respuestaPago"

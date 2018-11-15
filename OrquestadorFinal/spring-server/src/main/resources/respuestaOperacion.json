@@ -1,0 +1,10 @@
+{
+    "id" : "http://localhost/schema/respuestaOperacion.json",
+    "title" : "Respuesta de la Operacion",
+    "properties": {
+        "confirmacion": {
+            "type": "string",
+            "description": "Mensaje de respuesta"
+        }		
+    }
+}
