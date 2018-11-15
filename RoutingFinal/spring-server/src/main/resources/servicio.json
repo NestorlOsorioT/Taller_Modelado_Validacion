@@ -1,0 +1,10 @@
+{
+    "id" : "http://localhost/schema/servicio.json",
+    "title" : "Respuesta de la Operacion",
+    "properties": {
+        "ruta": {
+            "type": "string",
+            "description": "Mensaje de respuesta que contiene la url del servicio a consumir"
+        }		
+    }
+}

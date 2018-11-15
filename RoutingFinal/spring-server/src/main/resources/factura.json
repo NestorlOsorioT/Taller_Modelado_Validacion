@@ -1,0 +1,14 @@
+{
+    "id" : "http://localhost/schema/factura.json",
+    "title" : "Datos de la factura",
+    "properties": {
+        "nroFactura": {
+            "type": "string",
+            "description": "Número de la factura"
+        }
+		"operacion": {
+            "type": "string",
+            "description": "Operacion a consumir, Consultar,Pagar,Componer"
+        }
+    }
+}

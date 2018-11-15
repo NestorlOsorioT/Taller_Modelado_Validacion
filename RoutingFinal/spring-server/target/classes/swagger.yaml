@@ -1,0 +1,57 @@
+swagger: "2.0"
+info:
+  description: "Servicio que dado un numero de factura define que servicio es"
+  version: "1.0.0"
+  title: "Servicio Routing"
+host: "localhost:5000"
+schemes:
+- "http"
+paths:
+  /routing:
+    post:
+      description: Retorna la ruta del servicio al que corresponde la factura
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Numero de la factura y operacion a consumir"
+        required: true
+        schema:
+          $ref: "#/definitions/factura"
+      responses:
+        200:
+          description: Retorna los datos del servicio que se debe consumir.
+          schema:
+            $ref: "#/definitions/servicio" 
+        404:
+          description: Error en los parámetros, página no encontrada.
+definitions:
+  factura:
+    type: object
+    required:
+    - "nroFactura"
+    - "operacion"
+    properties:
+      nroFactura:
+        type: "string"
+        example: = "1234567"
+      operacion:
+        type: "string"
+        example: = "Consultar,Pagar,Compensar"
+    xml:
+      name: "factura"
+  servicio:
+    type: object
+    required: 
+    - "ruta"
+    properties:
+      nombre:
+        type: "string"
+        example: "http://localhost:9090/servicios/pagos/v1/payments1|2|plantillaxml|operacion|metodo"
+    xml:
+      name: "servicio"
