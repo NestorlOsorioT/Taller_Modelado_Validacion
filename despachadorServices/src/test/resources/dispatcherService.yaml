@@ -1,0 +1,84 @@
+swagger: "2.0"
+info:
+  description: "Servicio de transformacion."
+  version: "1.0.0"
+  title: "Servicio Transformacion"
+  termsOfService: "http://swagger.io/terms/"
+  contact: 
+    email: "osorio.nestor@javeriana.edu.co"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:8080"
+basePath: "/dispatcherServices"
+tags:
+- name: "Lista"
+  description: "consumir operacion"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /transformarOperacion/:
+    get:
+      tags:
+      - sumaNros
+      summary: "recibe un servicio para consumir, el numero de factura y valor"
+      operationId: sumaNros
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/xml
+      - application/json
+      parameters:
+      - in: body
+        name: sumaNros
+        description: calculadora
+        required: true
+        schema:
+          $ref: '#/definitions/request'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/response'
+        '201':
+          description: Created
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        
+definitions:
+  request:
+    type: object
+    properties:
+      ruta:
+        type: string
+        example: "http://servicio,1,1,0,2"
+      nrofactura:
+        type: number
+        example: 1121
+      valorfactura:
+        type: number
+        format: double
+        example: 1121.22
+  response:
+    type: object
+    properties:
+      nrofactura:
+        type: number
+        format: double
+      mensaje:
+        type: string
+        example: "finalizado"
+      valorfactura:
+        type: number
+        format: double
+        example: 222332.2121
+ 

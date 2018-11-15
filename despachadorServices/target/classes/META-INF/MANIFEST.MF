@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: transformacionservicesfin
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Nestor Leonel Osorio
+Implementation-Vendor-Id: com.javainuse
+Build-Jdk: 1.8.0_181
+Implementation-URL: http://projects.spring.io/spring-boot/transformaci
+ onservicesfin/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

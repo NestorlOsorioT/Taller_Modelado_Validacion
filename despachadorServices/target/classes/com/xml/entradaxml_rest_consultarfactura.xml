@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<factura>
+	<idFactura>1234555555</idFactura>
+	<valorFactura>231123312</valorFactura>
+</factura>
