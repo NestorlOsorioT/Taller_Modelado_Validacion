@@ -1,8 +1,8 @@
 # Taller_Modelado_Validacion
 Integrantes
-<b>LUZ YENNY CARDENAS HIDALGO</b>
-<b>HAROLD PUENTES ALFONSO
-<b>NESTOR LEONEL OSORIO TOVAR
+<b>LUZ YENNY CARDENAS HIDALGO</b><br>
+<b>HAROLD PUENTES ALFONSO</b><br>
+<b>NESTOR LEONEL OSORIO TOVAR</b><br>
 
 
 Diseño: Arquitectura orientada a servicios, creamos un servicio orquestador que se encarga de manejar el proceso, y de consumir los 
