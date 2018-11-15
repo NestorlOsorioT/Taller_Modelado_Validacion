@@ -1,5 +1,5 @@
 # Taller_Modelado_Validacion
-Integrantes
+Integrantes<br>
 <b>LUZ YENNY CARDENAS HIDALGO</b><br>
 <b>HAROLD PUENTES ALFONSO</b><br>
 <b>NESTOR LEONEL OSORIO TOVAR</b><br>
@@ -22,9 +22,9 @@ los mismos.
 Se implemento un inventario de servicios para publicar y registrar los servicios  en WSO2, 
 domain inventory para el gobierno de los servicios 
 Otro patrón que manejamos fue el de Schema Centralization teniendo en cuenta que creamos esquemas aparte de los contratos.
-
-FUNCIONALIDAD
-
+<br>
+<b>FUNCIONALIDAD</b>
+<br>
 Este proyecto funciona con  3 servicios independientes:
 
 ORQUESTADOR, recibe una peticion del cliente conformada por un numero de factura, una operacion a realizar (consultar, pagar, compensar)
